@@ -89,6 +89,12 @@ var icsFormatter = function() {
                 'LOCATION:' + location,
                 'SUMMARY;LANGUAGE=en-us:' + subject,
                 'TRANSP:TRANSPARENT',
+                'BEGIN:VALARM',
+                'TRIGGER:-PT5M',
+                'REPEAT:0',
+                'ACTION:DISPLAY',
+                'DESCRIPTION:Reminder',
+                'END:VALARM',
                 'END:VEVENT'
             ].join(SEPARATOR);
 
